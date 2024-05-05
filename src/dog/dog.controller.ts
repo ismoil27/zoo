@@ -12,10 +12,10 @@ export class DogController {
   }
 
   @Get('intro/:id')
-  public introduceDog(@Param() params:any): string {
-    console.log('params:::', params);
+  public introduceDog(@Param('id') id: string): string {
+    console.log('id:::', id);
     // console.log('query', request.query);
-    
+
     return this.dogSerice.introduceDog();
   }
 }
