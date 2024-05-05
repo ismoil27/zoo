@@ -12,8 +12,8 @@ export class DogController {
   }
 
   @Get('intro/:id')
-  public introduceDog(@Param('id') id: string, @Query() query: any): string {
-    console.log('id:::', id);
+  public introduceDog(@Param() params: string, @Query() query: any): string {
+    console.log('params:::', params);
     console.log('query', query);
 
     return this.dogSerice.introduceDog();
